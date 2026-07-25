@@ -17,11 +17,7 @@ spec:
     spec:
       initContainers:
         - name: db-migration
-<<<<<<< HEAD
-          image: ghcr.io/arunkk98/payment-api:92cb431
-=======
-          image: ghcr.io/arunkk98/payment-api:92cb431
->>>>>>> f700a19 (fix: use postgres:15-alpine image for db-migration init container)
+          image: postgres:15-alpine
           command:
             - sh
             - -c
@@ -39,15 +35,12 @@ spec:
                   status VARCHAR(20),
                   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 );"
+
       containers:
         - name: payment-api
-<<<<<<< HEAD
           image: ghcr.io/arunkk98/payment-api:92cb431
           args:
             - "-text=Payment API v1.0.0 Online"
-=======
-          image: ghcr.io/arunkk98/payment-api:92cb431
->>>>>>> f700a19 (fix: use postgres:15-alpine image for db-migration init container)
           ports:
             - containerPort: 5678
           readinessProbe:
