@@ -16,7 +16,7 @@ spec:
       # --- SENIOR PATTERN: AUTOMATED DB MIGRATION INITCONTAINER ---
       initContainers:
         - name: db-migration
-          image: postgres:15-alpine
+          image: ghcr.io/arunkk98/payment-api:62eff90
           command:
             - sh
             - -c
@@ -37,7 +37,7 @@ spec:
       # --- MAIN APPLICATION CONTAINER ---
       containers:
         - name: payment-api
-          image: hashicorp/http-echo:latest # Temporary placeholder until GH Actions CI builds your custom API image
+          image: ghcr.io/arunkk98/payment-api:62eff90
           args:
             - "-text=Payment API v1.0.0 Online"
           ports:
