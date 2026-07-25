@@ -35,12 +35,9 @@ spec:
                   status VARCHAR(20),
                   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 );"
-
       containers:
         - name: payment-api
           image: ghcr.io/arunkk98/payment-api:latest
-          args:
-            - "-text=Payment API v1.0.0 Online"
           ports:
             - containerPort: 5678
           readinessProbe:
