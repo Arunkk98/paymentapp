@@ -16,7 +16,7 @@ spec:
       # --- SENIOR PATTERN: AUTOMATED DB MIGRATION INITCONTAINER ---
       initContainers:
         - name: db-migration
-          image: ghcr.io/arunkk98/payment-api:4f4328d
+          image: ghcr.io/arunkk98/payment-api:0ef359a
           command:
             - sh
             - -c
@@ -37,7 +37,7 @@ spec:
       # --- MAIN APPLICATION CONTAINER ---
       containers:
         - name: payment-api
-          image: ghcr.io/arunkk98/payment-api:4f4328d
+          image: ghcr.io/arunkk98/payment-api:0ef359a
           args:
             - "-text=Payment API v1.0.0 Online"
           ports:
