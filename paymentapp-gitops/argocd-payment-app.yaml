@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/Arunkk98/paymentapp.git' # <-- Update with your GitHub username & repo name
     targetRevision: HEAD
-    path: paymentapp-gitops/apps/ #  apps subfolder inside the monorepo
+    path: paymentapp-gitops/apps #  apps subfolder inside the monorepo
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: payment-system
