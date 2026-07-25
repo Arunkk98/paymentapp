@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-frontend
+  namespace: payment-system
+  labels:
+    app: payment-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payment-frontend
+  template:
+    metadata:
+      labels:
+        app: payment-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: nginx:alpine
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-frontend-service
+  namespace: payment-system
+  labels:
+    app: payment-frontend
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: payment-frontend
