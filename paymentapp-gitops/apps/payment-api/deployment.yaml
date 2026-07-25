@@ -38,7 +38,7 @@ spec:
 
       containers:
         - name: payment-api
-          image: ghcr.io/arunkk98/payment-api:92cb431
+          image: ghcr.io/arunkk98/payment-api:latest
           args:
             - "-text=Payment API v1.0.0 Online"
           ports:
