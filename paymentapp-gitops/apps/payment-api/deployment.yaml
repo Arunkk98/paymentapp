@@ -18,9 +18,9 @@ spec:
       initContainers:
         - name: db-migration
 <<<<<<< HEAD
-          image: ghcr.io/arunkk98/payment-api:0ef359a
+          image: ghcr.io/arunkk98/payment-api:92cb431
 =======
-          image: postgres:15-alpine    # <--- FIX: Uses postgres image containing 'psql'
+          image: ghcr.io/arunkk98/payment-api:92cb431
 >>>>>>> f700a19 (fix: use postgres:15-alpine image for db-migration init container)
           command:
             - sh
@@ -42,11 +42,11 @@ spec:
       containers:
         - name: payment-api
 <<<<<<< HEAD
-          image: ghcr.io/arunkk98/payment-api:0ef359a
+          image: ghcr.io/arunkk98/payment-api:92cb431
           args:
             - "-text=Payment API v1.0.0 Online"
 =======
-          image: ghcr.io/arunkk98/payment-api:latest
+          image: ghcr.io/arunkk98/payment-api:92cb431
 >>>>>>> f700a19 (fix: use postgres:15-alpine image for db-migration init container)
           ports:
             - containerPort: 5678
