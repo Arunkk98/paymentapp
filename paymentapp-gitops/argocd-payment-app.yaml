@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/Arunkk98/paymentapp.git'
+    repoURL: 'https://github.com/arunkk98/paymentapp.git'
     targetRevision: HEAD
     path: paymentapp-gitops/apps
     directory:
